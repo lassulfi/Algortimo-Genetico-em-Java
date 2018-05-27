@@ -6,6 +6,7 @@
 package main;
 
 import model.Individuo;
+import model.Populacao;
 
 /**
  *
@@ -17,7 +18,11 @@ public class Main {
         
         Individuo individuo = new Individuo();
         
-        System.out.println(individuo.printIndividuo());
+        Populacao pop = new Populacao();
+        
+        System.out.println(pop.printPopulacao());
+        
+        
         
     }
     
