@@ -25,7 +25,7 @@ public class Individuo {
         //Instancia do cromossomo com a quantidade de bits na classe Contantes
         this.cromossomo = new BitSet(Constantes.getSizeCromossomo());
         //Cria os genes do cromossomo (bits aleatórios)
-        for (int i = 0; i < cromossomo.length(); i++) {
+        for (int i = 0; i <Constantes.getSizeCromossomo(); i++) {
             this.cromossomo.set(i, (Constantes.random.nextDouble() > 0.5) ? true : false);
         }
     }
@@ -117,11 +117,19 @@ public class Individuo {
      */
     public int getInt(){
         
-        if (cromossomo.size() > 32) {
+        if (cromossomo.length() > 32) {
             throw new IllegalArgumentException("O cromossomo deve ter no máximo 32 bits");
         }
         
-        return cromossomo.size();
+        int bitInteger = 0;
+        
+        for (int i = 0; i < 32; i++) {
+            if (cromossomo.get(i)) {
+                bitInteger |= (1 << i);
+            }
+        }
+                
+        return bitInteger;
     }
     
     /**
