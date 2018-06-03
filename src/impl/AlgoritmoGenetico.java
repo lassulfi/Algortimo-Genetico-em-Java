@@ -5,7 +5,6 @@
  */
 package impl;
 
-import com.sun.corba.se.impl.orbutil.closure.Constant;
 import java.util.ArrayList;
 import java.util.List;
 import model.Constantes;
@@ -126,7 +125,7 @@ public class AlgoritmoGenetico {
         //Verifica se o individuo está na taxa de crossover
         if (Constantes.random.nextDouble() < taxaCrossover) {
             //Validacao do ponto de corte
-            System.out.println("Caiu na taxa de crossover. Ponto de corte " + pontoDeCorte);
+            //System.out.println("Caiu na taxa de crossover. Ponto de corte " + pontoDeCorte);
             for (int i = pontoDeCorte; i < Constantes.getSizeCromossomo(); i++) {
                 novoInd[PAI].setGene(i, maeAux.getGene(i));
                 novoInd[MAE].setGene(i, paiAux.getGene(i));

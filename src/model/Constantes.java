@@ -17,7 +17,7 @@ public class Constantes {
     //Atributos
     private static final int SIZE_CROMOSSOMO = 9; //Tamanho do individuo
     private static final int SIZE_POPULACAO = 1000; //Tamanho da populacao
-    public static int functionXSize = (int) Math.pow(2, SIZE_CROMOSSOMO); //Tamanho da função no eixo X
+    private static int functionXSize = (int) Math.pow(2, SIZE_CROMOSSOMO); //Tamanho da função no eixo X
     public static Random random = new Random(); //Objeto randomico
     
     //Métodos
@@ -46,6 +46,14 @@ public class Constantes {
      */
     public static int getSizePopulacao(){
         return SIZE_POPULACAO;
+    }
+    
+    /**
+     * Retorna o tamanho da função no eixo X
+     * @return Tamanho da função no eixo X
+     */
+    public static int getXSizePopulacao(){
+        return functionXSize;
     }
     
 }
