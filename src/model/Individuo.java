@@ -81,6 +81,15 @@ public class Individuo {
     }
     
     /**
+     * Retorna um gene em uma determinada posicao
+     * @param position posicao do gene
+     * @return bit correspondente ao gene na posicao desejada
+     */
+    public boolean getGene(int position){
+        return cromossomo.get(position);
+    }
+    
+    /**
      * Define o range da roleta
      * @param inicio
      * @param fim 
